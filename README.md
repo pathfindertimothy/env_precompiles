@@ -13,6 +13,7 @@
   - Kurtosis: `curl -L https://github.com/0xPolygon/kurtosis-cdk/releases/latest/download/install.sh | bash`
   - Foundry: `curl -L https://foundry.paradigm.xyz | bash`
   - Make sure jq, git and a shell are installed in your system
+  - Run: `forge install foundry-rs/forge-std` to add foundry library for end-to-end testing
 - To start cdk-erigon devnet:
   - Make sure docker is running
   - kurtosis run --enclave cdk github.com/0xPolygon/kurtosis-cdk@main
@@ -27,18 +28,21 @@
 ## To Run Scripts
 
 - To run Raw Precompile Invocation
+
   - Export private key and rpc url in bash
   - Run: sh `raw_precompile_invocation.sh`
   - The output result (stage1) will give the `Transaction Hash`, `Output` and `Block Number`
-  - The output correspond to the SHA256 hash value of "hello". When computed using Python for example, the same output should be retrieved. 
+  - The output correspond to the SHA256 hash value of "hello". When computed using Python for example, the same output should be retrieved.
   - Verdict: the output hash matches the SHA256 of the string "hello"
 
 - To compile the contract
+
   - Run: `forge compile ECRecoverWrapper.sol`
   - Result: should compile successfully
   - Verdict: compiled successfully
 
 - To deploy the contract
+
   - Run: `node 02_deploy.js`
   - Output: contract should deploy successfully with output values (stage2)
   - Verdict: deployed successfully
