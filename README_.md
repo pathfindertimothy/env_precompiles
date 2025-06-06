@@ -1,9 +1,0 @@
-- to check status of enclave: kurtosis enclave ls
-- to clean up the existing enclave: kurtosis enclave rm --force cdk
-- to clean up: kurtosis clean -a
-- to remove conflicting network: docker network rm kt-cdk
-- to remove network
-    - docker network inspect kt-cdk
-    - docker stop <container_id>
-    - docker rm <container_id>
-- if image is already cached add flag --no-pull: kurtosis run --enclave cdk --no-pull github.com/0xPolygon/kurtosis-cdk@main

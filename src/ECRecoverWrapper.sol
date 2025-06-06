@@ -15,5 +15,3 @@ contract EcrecoverWrapper {
         return abi.decode(result, (address));
     }
 }
-
-// to compfile: forge compile contract.sol

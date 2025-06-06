@@ -1,0 +1,5 @@
+[profile.default]
+src = "src"
+out = "out"
+libs = ["lib"]
+rpc_url = "http://127.0.0.1:57412"
